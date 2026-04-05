@@ -27,8 +27,9 @@
 ### Аутентификация и итоговая проверка
 - Создан файл /etc/ssh/denied_users с содержимым "root", вход для "root" заблокирован через PAM (listfile.so)
 - Под пользователем mephi-admin создан файл /data/mephi-web/index.html с содержимым: Hello from Student: 368688
-- Проверка через curl http://localhost - Hello from Student: 368688 
-- Проверка через curl http://192.168.1.100 - Hello from Student: 368688 
+- Проверка через curl http://localhost - Hello from Student: 368688
+- Проверка через curl http://192.168.1.100 - Hello from Student: 368688
+- Проверка после перезагрузки - система настроена согласно требованиям
 
 ### Артефакты
 | Файл                              | Раздел | Что проверяется                          |
@@ -46,3 +47,4 @@
 | curl_output.txt                   | 5.2    | Результат тестирования                   |
 | mephi-nginx-screenshot.png        | 5.2    | Визуальное подтверждение                 |
 | tcpdump.rpm                       | 2.2    | Подтверждение скачивания RPM             |
+| mephi-nginx-screenshot_reboot.png | -      | Проверка после перезагрузки              |
