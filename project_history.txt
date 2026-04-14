@@ -49,7 +49,7 @@
   332  getenforce
   334  sudo chcon -R -t httpd_sys_content_t /data/mephi-web
   335  sudo systemctl restart nginx
-  336  sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
+  336  sudo setcap cap_net_raw,cap_net_admin+ep /usr/sbin/tcpdump
   337  sudo -u mephi-admin tcpdump --help
   339  echo "root" | sudo tee /etc/ssh/denied_users
   340  echo "auth required pam_listfile.so item=user sense=deny file=/etc/ssh/denied_users onerr=succeed" | sudo tee -a /etc/pam.d/sshd
